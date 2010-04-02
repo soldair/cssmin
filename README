@@ -1,0 +1,33 @@
+the goal of this project is to make it easy to call this script and get reasonably
+good comment and whitespace stripping from css without other dependancies.
+
+it should just work =). its a utility so the expected use is to shell exec it from your web apps
+
+==== how to use ====
+1. checkout repo
+
+2. cd repo dir
+
+3. build and test the app - php is required to run the tests but it will compile without it
+	./compile
+
+4. integrate it into your apps
+	$min = `test.css > ./cssmin`;
+
+====================
+
+
+hey all,
+recently i had to work on some client side caching optimization. 
+
+this means send less data compress it and make fewer requests.
+
+i used crockfords jsmin as other more optimized jsmin tools required that 
+you use compile flags or failed to support refrences to named anonymous functions
+
+i found that with a new finite state machine and a few css spec based tweeks this jsmin would be perfect for cssmin
+
+thus cssmin
+
+
+--Ryan Day

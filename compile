@@ -1,0 +1,5 @@
+#!/bin/sh
+echo "compiling"
+gcc cssmin.c -o cssmin
+echo "running tests..."
+./cssminunit.php
