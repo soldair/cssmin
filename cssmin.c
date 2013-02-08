@@ -166,9 +166,14 @@ machine(int c)
 				} else if (c == '}') {
 					//handle unterminated declaration
 					state = STATE_FREE;
-				} else if ( c == '\n' ) {
-					c = 0;
-					state = STATE_BLOCK;
+				} else if ( c == '\n') {
+				  //skip new lines
+				  c = 0;
+				} else if (c == ' ' ) {
+				  //skip multiple spaces after each other
+				  if( peek() == c ) {
+					  c = 0;
+					}
 				}
 				
 			} else if (c == ')') {
