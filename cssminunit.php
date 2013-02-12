@@ -64,6 +64,23 @@ test;
 
 //---------
 
+$test = 'multi-line declarations should not be lost';
+$tests[$test] = <<<test
+body {
+    line-height:1.5;
+    background: transparent
+        url(images/newwiz_back.gif.xhtml) repeat-x
+        0 0;
+   	font-family:"Trebuchet MS",Helvetica,sans-serif;
+}
+test;
+
+$results[$test] = <<<test
+body{line-height:1.5;background: transparent url(images/newwiz_back.gif.xhtml) repeat-x 0 0;font-family:"Trebuchet MS",Helvetica,sans-serif;}
+test;
+
+//---------
+
 
 $pass = 0;
 $fails = 0;
