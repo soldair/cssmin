@@ -52,8 +52,6 @@ static int tmp_state;
 
 static int state = 1;
 
-static int last_state = 1;
-
 static int in_paren = 0;
 
 /* get -- return the next character from stdin. Watch out for lookahead. If
