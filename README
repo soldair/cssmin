@@ -1,5 +1,5 @@
 the goal of this project is to make it easy to call this script and get reasonably
-good comment and whitespace stripping from css without other dependancies.
+good comment and whitespace stripping from css without other dependencies.
 
 it should just work =). its a utility so the expected use is to shell exec it from your web apps
 
