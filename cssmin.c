@@ -130,8 +130,11 @@ machine(int c)
 				@import etc.
 				@font-face{
 			*/
-			if (c == '\n' || c == ';') {
+			if ((c == '\n' && peek() == '\n') || c == ';') {
 				c = ';';
+				state = STATE_FREE;
+			} else if (c == '\n'){
+				c = ' ';
 				state = STATE_FREE;
 			} else if(c == '{') {
 				state = STATE_BLOCK;

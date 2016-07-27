@@ -63,6 +63,22 @@ body{font-family:"Trebuchet MS",Helvetica,sans-serif}
 test;
 
 //---------
+$test = '@media queries can be spread across multiple lines';
+$tests[$test] = <<<test
+@media only screen
+and (min-device-width: 400px){
+	body {
+		background-color: red !important;
+	}
+}
+test;
+
+$results[$test] = <<<test
+@media only screen and (min-device-width: 400px){body { background-color: red !important;}}
+test;
+
+
+//---------
 
 $test = 'multi-line declarations should not be lost';
 $tests[$test] = <<<test
